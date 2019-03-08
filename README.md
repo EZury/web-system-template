@@ -1,4 +1,4 @@
-# WEB system
+# Yes No API
 - [ ] Replace "WEB system" with your system name
 
 ## Description
