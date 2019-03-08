@@ -1,8 +1,13 @@
 # Yes No API
-- [ ] Replace "WEB system" with your system name
+- [x] Replace "WEB system" with your system name
 
 ## Description
-- [ ] Provide WEB system description in few sentences - its purpose, users, etc.
+- [x] Provide WEB system description in few sentences - its purpose, users, etc.
+
+Yes No API works like this: you provide answer (only from these: "yes", "no" and "maybe") based on this I get random gif with that type of answer (Example: if I want to get gif which will imply an answer yes, I have to provide GET post with "answer" : "yes"). Because of this I don't have that many choices to make interesting site. My solution is to create different script who will get all objects or atleast significant amount of objects for me to play with. When I have all those objects then I can modify them to my liking, uses I like to achieve:
+    Add "time" when that object was created (on my server), how many "likes" and "views" that object has (for list purposes) and ID.
+    Web System will provide list of images with with different answers, then I can provide Most popular lists, Most viewed lists.
+    Web System will provide a few buttons to add Image and get Random Image.
 
 ## Entity definition
 - [ ] Define the entity ("object" that will be manipulated) of WEB system
