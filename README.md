@@ -5,20 +5,31 @@
 - [x] Provide WEB system description in few sentences - its purpose, users, etc.
 
 Yes No API works like this: you provide answer (only from these: "yes", "no" and "maybe") based on this I get random gif with that type of answer (Example: if I want to get gif which will imply an answer yes, I have to provide GET post with "answer" : "yes"). Because of this I don't have that many choices to make interesting site. My solution is to create different script who will get all objects or atleast significant amount of objects for me to play with. When I have all those objects then I can modify them to my liking, uses I like to achieve:
-    Add "time" when that object was created (on my server), how many "likes" and "views" that object has (for list purposes) and ID.
-    Web System will provide list of images with with different answers, then I can provide Most popular lists, Most viewed lists.
-    Web System will provide a few buttons to add Image and get Random Image.
+    - Add "time" when that object was created (on my server) and time when that object was modified, how many "likes" and "views" that object has (for list purposes) and ID.
+    - Web System will provide list of images with with different answers, then I can provide Most popular lists, Most viewed lists.
+    - Web System will provide a few buttons to add Image and get Random Image.
 
 ## Entity definition
-- [ ] Define the entity ("object" that will be manipulated) of WEB system
-- [ ] Entity should have a name
-- [ ] Entity should have 3 mandatory attributes:
-    - [ ] ID - depending on specific service this could be a number or string
-    - [ ] Creation date - (if applicable for specific service) ISO 8601 format date string
-    - [ ] Modification date - (if applicable for specific service) ISO 8601 format date string
-- [ ] Entity should have at least 5 custom attributes
-    - [ ] Each attribute should have a type defined: number, string, ISO 8601 date string, boolean, object, array or other
-    - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
+- [x] Define the entity ("object" that will be manipulated) of WEB system
+    gif = {
+        "id" : (number 20),
+        "creationDate" : (date),
+        "modificationDate" : (date),
+        "likes" : (number 10),
+        "views" : (number 10),
+        "answer" : (string 10),
+        "forced" : (string 10),
+        "image" : (string 100 (URL))
+    };
+    date ISO 8601 format = yyyy-mm-ddThh:mm:ss.ffffff
+- [x] Entity should have a name
+- [x] Entity should have 3 mandatory attributes:
+    - [x] ID - depending on specific service this could be a number or string
+    - [x] Creation date - (if applicable for specific service) ISO 8601 format date string
+    - [x] Modification date - (if applicable for specific service) ISO 8601 format date string
+- [x] Entity should have at least 5 custom attributes
+    - [x] Each attribute should have a type defined: number, string, ISO 8601 date string, boolean, object, array or other
+    - [x] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
 
 ## API definition
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
