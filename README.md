@@ -4,13 +4,14 @@
 ## Description
 - [x] Provide WEB system description in few sentences - its purpose, users, etc.
 
-Yes No API works like this: you provide answer (only from these: "yes", "no" and "maybe") based on this I get random gif with that type of answer (Example: if I want to get gif which will imply an answer yes, I have to provide GET post with "answer" : "yes"). Because of this I don't have that many choices to make interesting site. My solution is to create different script who will get all objects or atleast significant amount of objects for me to play with. When I have all those objects then I can modify them to my liking, uses I like to achieve:
+    Yes No API works like this: you provide answer (only from these: "yes", "no" and "maybe") based on this I get random gif with that type of answer (Example: if I want to get gif which will imply an answer yes, I have to provide GET post with "answer" : "yes"). Because of this I don't have that many choices to make interesting site. My solution is to create different script who will get all objects or atleast significant amount of objects for me to play with. When I have all those objects then I can modify them to my liking, uses I like to achieve:
     - Add "time" when that object was created (on my server) and time when that object was modified, how many "likes" and "views" that object has (for list purposes) and ID.
     - Web System will provide list of images with with different answers, then I can provide Most popular lists, Most viewed lists.
     - Web System will provide a few buttons to add Image and get Random Image.
 
 ## Entity definition
 - [x] Define the entity ("object" that will be manipulated) of WEB system
+
     imageEntity = {
         "id" : (number 20),
         "creationDate" : (date),
@@ -21,7 +22,9 @@ Yes No API works like this: you provide answer (only from these: "yes", "no" and
         "forced" : (string 10),
         "image" : (string 100 (URL))
     };
+    
     date ISO 8601 format = yyyy-mm-ddThh:mm:ss.ffffff
+    
 - [x] Entity should have a name
 - [x] Entity should have 3 mandatory attributes:
     - [x] ID - depending on specific service this could be a number or string
@@ -66,12 +69,13 @@ Yes No API works like this: you provide answer (only from these: "yes", "no" and
 - [ ] Should return all 5xx errors in unified format. Define format using `joi` language
 
 ## UI definition
-- [ ] Define the structure of how visually the WEB system is going to look like
-- [ ] Should have at least one view defined with https://wireframe.cc (or other wireframe tool):
-- [ ] The view should have a title
-- [ ] The view should have a description of a service provided by web system
-- [ ] The view should include at least 2 UI components:
-    - [ ] A component to display multiple entities with all their attribute values visible. It should be posible to remove and edit selected entity.
-        - [ ] Depending on chosen header of API method that returns multiple entities, it should be posible to select specific 10 entities starting index, sort entities by attribute, filter entities by attribute pattern, or other (should be approved by Product Owner (PO))
-    - [ ] A component to create a new entity/edit existing entity. It should be posbile to create new entity and edit selected entity
-        - [ ] Each attribute should have a dedicated editor field: text box for string or number, checkbox or radio buttons for boolean, date picker for date, etc.
+
+    https://wireframe.cc/pro/edit/240753
+
+- [x] Define the structure of how visually the WEB system is going to look like
+- [x] Should have at least one view defined with https://wireframe.cc (or other wireframe tool):
+- [x] The view should have a title
+- [x] The view should have a description of a service provided by web system
+- [x] The view should include at least 2 UI components:
+    - [x] A component to display multiple entities with all their attribute values visible. It should be posible to remove and edit selected entity.
+    - [x] A component to create a new entity/edit existing entity. It should be posbile to create new entity and edit selected entity
