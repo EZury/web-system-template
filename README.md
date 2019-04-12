@@ -11,7 +11,7 @@ Yes No API works like this: you provide answer (only from these: "yes", "no" and
 
 ## Entity definition
 - [x] Define the entity ("object" that will be manipulated) of WEB system
-    gif = {
+    imageEntity = {
         "id" : (number 20),
         "creationDate" : (date),
         "modificationDate" : (date),
@@ -32,19 +32,36 @@ Yes No API works like this: you provide answer (only from these: "yes", "no" and
     - [x] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
 
 ## API definition
-- [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
+- [x] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
+    GET /api    - returns random GIF entity from https://yesno.wtf/#api.
 - [ ] Optionally define additional API methods that WEB system is going to expose
-- [ ] API should have at least 4 methods
-    - [ ] A method to return entity by ID. Should not have request body
-    - [ ] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
-        - [ ] Return only entities that match pattern in one of its attributes
-        - [ ] Return 10 entities starting provided index
-        - [ ] Return sorted entities by one of its attributes (both ascending and descending)
-        - [ ] Other (should be approved by Product Owner (PO))
-    - [ ] A method to remove entity by ID. Returns removed entity. Should not have request body
-    - [ ] A method to update entity by ID. Accepts entity to update and returns updated entity
-- [ ] Each method should have HTTP method defined
-- [ ] Each method should have URI defined (use {id} as entity ID placeholder)
+- [x] API should have at least 4 methods
+    - [x] A method to return entity by ID. Should not have request body
+    
+        GET /api/image/{id}             - returns image entity by it's id.
+        
+        POST errors:
+        
+    - [x] A method to return multiple entities (Array) by ID. This method should support at least one header value to:
+    
+        GET /api/images/{string}         - returns images by {string} condition.
+        
+        POST errors:
+        
+    - [x] A method to remove entity by ID. Returns removed entity. Should not have request body
+    
+        DELETE /api/image/{id}          - deletes image entity by it's id.
+        
+        POST errors:
+    
+    - [x] A method to update entity by ID. Accepts entity to update and returns updated entity
+    
+        POST /api/image/{id}            - updates image entity by it's id.
+        
+        POST errors:
+    
+- [x] Each method should have HTTP method defined
+- [x] Each method should have URI defined (use {id} as entity ID placeholder)
 - [ ] Should return all 4xx errors in unified format. Define format using `joi` language
 - [ ] Should return all 5xx errors in unified format. Define format using `joi` language
 
